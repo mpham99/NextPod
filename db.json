@@ -1,0 +1,74 @@
+{
+  "albums": [
+    {
+      "id": 1,
+      "name": "After Hours",
+      "artist": "The Weeknd",
+      "released_date": "2020-03-20",
+      "tracks": 14
+    },
+    {
+      "id": 2,
+      "name": "Future Nostalgia",
+      "artist": "Dua Lipa",
+      "released_date": "2020-03-27",
+      "tracks": 11
+    },
+    {
+      "id": 3,
+      "name": "Fine Line",
+      "artist": "Harry Styles",
+      "released_date": "2019-12-13",
+      "tracks": 12
+    },
+    {
+      "id": 4,
+      "name": "Evermore",
+      "artist": "Taylor Swift",
+      "released_date": "2020-12-11",
+      "tracks": 15
+    },
+    {
+      "id": 5,
+      "name": "Justice",
+      "artist": "Justin Bieber",
+      "released_date": "2021-03-19",
+      "tracks": 16
+    },
+    {
+      "id": 6,
+      "name": "Happier Than Ever",
+      "artist": "Billie Eilish",
+      "released_date": "2021-07-30",
+      "tracks": 16
+    },
+    {
+      "id": 7,
+      "name": "When We All Fall Asleep, Where Do We Go?",
+      "artist": "Billie Eilish",
+      "released_date": "2019-03-29",
+      "tracks": 14
+    },
+    {
+      "id": 8,
+      "name": "Positions",
+      "artist": "Ariana Grande",
+      "released_date": "2020-10-30",
+      "tracks": 14
+    },
+    {
+      "id": 9,
+      "name": "Planet Her",
+      "artist": "Doja Cat",
+      "released_date": "2021-06-25",
+      "tracks": 14
+    },
+    {
+      "id": 10,
+      "name": "Chemtrails Over the Country Club",
+      "artist": "Lana Del Rey",
+      "released_date": "2021-03-19",
+      "tracks": 11
+    }
+  ]
+}
