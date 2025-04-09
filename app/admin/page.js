@@ -2,16 +2,22 @@ import Link from 'next/link';
 import {deleteAlbum} from '@/app/actions/server-actions';
 import {getAlbums} from "@/app/actions/client-actions";
 import {Button} from '@/components/ui/button';
-import {Card} from '@/components/ui/card';
 
 export default async function Admin() {
     const albums = await getAlbums();
 
     return (
         <div className="max-w-6xl mx-auto px-6 py-10">
-            <h1 className="text-3xl font-bold text-center mb-6">Admin</h1>
+            <div className="relative flex items-center justify-center mb-6">
+                <h1 className="text-3xl font-bold absolute left-1/2 -translate-x-1/2">Admin</h1>
+                <Button asChild variant="outline" className="ml-auto">
+                    <Link href="/admin/create" className="inline-block text-orange-600 hover:underline font-medium">
+                        Create New
+                    </Link>
+                </Button>
+            </div>
 
-            <div className="max-w-6xl mx-auto px-6 py-6">
+            <div className="max-w-6xl mx-auto mx-6 my-6">
                 <table className="w-full text-sm text-left border-collapse">
                     <thead className="border-b bg-gray-100">
                     <tr>
