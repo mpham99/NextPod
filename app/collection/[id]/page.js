@@ -3,7 +3,7 @@ import {Button} from '@/components/ui/button';
 import { Terminal } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
-import {getAlbums, getAlbumDetail} from "@/app/actions/actions";
+import {getAlbums, getAlbumDetail} from "@/app/actions/client-actions";
 import Link from 'next/link';
 
 export default async function AlbumDetailPage({params}) {

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {Card, CardContent} from '/components/ui/card';
 import {Button} from '@/components/ui/button';
-import {getAlbums} from "@/app/actions/actions";
+import {getAlbums} from "@/app/actions/client-actions";
 
 
 export default async function Collection() {
