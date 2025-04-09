@@ -1,10 +1,30 @@
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
+import { Terminal } from "lucide-react";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+
 import {getAlbums, getAlbumDetail} from "@/app/collection/actions";
 import Link from 'next/link';
 
 export default async function AlbumDetailPage({params}) {
     const res = await getAlbumDetail(params.id);
+
+    if (res.status !== 200) {
+        return (
+            <div className="flex justify-center pt-10">
+                <Alert className="w-full max-w-2xl border-red-700 bg-red-300">
+                    <Terminal className="h-4 w-4" />
+                    <AlertTitle>Uh oh!</AlertTitle>
+                    <AlertDescription className="flex flex-col gap-2">
+                        <span>Item with ID {params.id} does not exist!</span>
+                        <Button asChild variant="link" className="self-start pl-0">
+                            <Link href="/collection">Back</Link>
+                        </Button>
+                    </AlertDescription>
+                </Alert>
+            </div>
+        );
+    }
 
     const album = await res.json();
     return (
