@@ -5,77 +5,88 @@
       "name": "After Hours",
       "artist": "The Weeknd",
       "released_date": "2020-03-20",
-      "tracks": 14
+      "tracks": 14,
+      "description": "Weeknd hit album"
     },
     {
       "id": "2",
       "name": "Future Nostalgia",
       "artist": "Dua Lipa",
       "released_date": "2020-03-27",
-      "tracks": 11
+      "tracks": 11,
+      "description": "A disco-inspired pop album packed with energy."
     },
     {
       "id": "3",
       "name": "Fine Line",
       "artist": "Harry Styles",
       "released_date": "2019-12-13",
-      "tracks": 12
+      "tracks": 12,
+      "description": "Ex-boyband member breakthrough album"
     },
     {
       "id": "4",
       "name": "Evermore",
       "artist": "Taylor Swift",
       "released_date": "2020-12-11",
-      "tracks": 15
+      "tracks": 15,
+      "description": "Taylor’s poetic indie-folk follow-up to Folklore."
     },
     {
       "id": "5",
       "name": "Justice",
       "artist": "Justin Bieber",
       "released_date": "2021-03-19",
-      "tracks": 16
+      "tracks": 16,
+      "description": "Justin Bieber's biggest album up to date."
     },
     {
       "id": "6",
       "name": "Happier Than Ever",
       "artist": "Billie Eilish",
       "released_date": "2021-07-30",
-      "tracks": 16
+      "tracks": 16,
+      "description": "Billie Eillish' sophomore album."
     },
     {
       "id": "7",
       "name": "When We All Fall Asleep, Where Do We Go?",
       "artist": "Billie Eilish",
       "released_date": "2019-03-29",
-      "tracks": 14
+      "tracks": 14,
+      "description": "Billie and FINNEAS had caught lightning in the bottle."
     },
     {
       "id": "8",
       "name": "Positions",
       "artist": "Ariana Grande",
       "released_date": "2020-10-30",
-      "tracks": 14
+      "tracks": 14,
+      "description": "A romantic R&B album full of sensuality and softness."
     },
     {
       "id": "9",
       "name": "Planet Her",
       "artist": "Doja Cat",
       "released_date": "2021-06-25",
-      "tracks": 14
+      "tracks": 14,
+      "description": "Doja's proof as the next rap girl."
     },
     {
-      "id": "14",
-      "name": "Lady Gaga",
-      "artist": "Chromatica",
-      "released_date": "2020-02-02",
-      "tracks": "13"
+      "id": "10",
+      "name": "Chemtrails Over the Country Club",
+      "artist": "Lana Del Rey",
+      "released_date": "2021-03-19",
+      "tracks": 11,
+      "description": "Dreamy Americana with Lana’s signature melancholic flair."
     },
     {
-      "id": "22",
-      "name": "Red",
-      "artist": "Taylor Swift",
-      "released_date": "2012-10-01",
-      "tracks": "12"
+      "id": "11",
+      "name": "Chromatica",
+      "artist": "Lady Gaga",
+      "released_date": "2022-05-06",
+      "tracks": "23",
+      "description": "Lady Gaga reheats her nachos"
     }
   ]
 }

@@ -10,6 +10,7 @@ export default function ClientForm({album}) {
         artist: album.artist,
         released_date: album.released_date,
         tracks: album.tracks,
+        description: album.description
     });
 
     function handleChange(e) {
@@ -28,7 +29,7 @@ export default function ClientForm({album}) {
             body: JSON.stringify(form)
         });
         if (res.ok) {
-            redirect("/");
+            redirect("/admin");
         }
     }
 
@@ -67,7 +68,13 @@ export default function ClientForm({album}) {
                             value={form.tracks} onChange={handleChange}/>
                 </div>
 
-                <button type="submit" className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                <div>
+                    <label className="block font-medium mb-1" htmlFor="description">Description</label>
+                    <input type="text" name="description" id="description" className="w-full border rounded p-2" required
+                           value={form.description} onChange={handleChange}/>
+                </div>
+
+                <button type="submit" className="mt-4 px-4 py-2 bg-orange-600 text-white rounded hover:bg-orange-700">
                     Update Album
                 </button>
             </form>

@@ -17,7 +17,7 @@ export default async function Edit({params}) {
                     <AlertDescription className="flex flex-col gap-2">
                         <span>Item with ID {params.id} does not exist!</span>
                         <Button asChild variant="link" className="self-start pl-0">
-                            <Link href="/collection">Back</Link>
+                            <Link href="/admin">Back</Link>
                         </Button>
                     </AlertDescription>
                 </Alert>
@@ -29,7 +29,7 @@ export default async function Edit({params}) {
     return (
         <div className="max-w-xl mx-auto px-6 py-6">
             <Button asChild variant="link" className="mb-4">
-                <Link href="/collection">← Back</Link>
+                <Link href="/admin">← Back</Link>
             </Button>
             <ClientForm album={album} />
         </div>

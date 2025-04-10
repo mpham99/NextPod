@@ -31,7 +31,12 @@ import {createAlbum} from '@/app/actions/server-actions';
                     <input type="number" name="tracks" id="tracks" className="w-full border rounded p-2" required />
                 </div>
 
-                <button type="submit" className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                <div>
+                    <label className="block font-medium mb-1" htmlFor="description">Description</label>
+                    <input type="text" name="description" id="description" className="w-full border rounded p-2" required />
+                </div>
+
+                <button type="submit" className="mt-4 px-4 py-2 bg-orange-600 text-white rounded hover:bg-orange-700">
                     Create Album
                 </button>
             </form>

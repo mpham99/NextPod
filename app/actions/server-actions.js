@@ -29,7 +29,8 @@ export async function createAlbum(formData){
     name: formData.get('name'),
     artist: formData.get('artist'),
     released_date: formData.get('released_date'),
-    tracks: formData.get('tracks')
+    tracks: formData.get('tracks'),
+    description: formData.get('description')
   };
 
   await fetch("http://localhost:4000/albums", {

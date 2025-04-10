@@ -58,6 +58,10 @@ export default async function AlbumDetailPage({params}) {
                             <td className="font-medium py-1 pr-4">Tracks</td>
                             <td>{album.tracks}</td>
                         </tr>
+                        <tr>
+                            <td className="font-medium py-1 pr-4">Description</td>
+                            <td>{album.description}</td>
+                        </tr>
                         </tbody>
                     </table>
                 </CardContent>
