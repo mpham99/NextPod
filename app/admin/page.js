@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import {deleteAlbum} from '@/app/actions/server-actions';
-import {getAlbums} from "@/app/actions/client-actions";
+import {deleteAlbum, getAlbums} from '@/app/actions/server-actions';
 import {Button} from '@/components/ui/button';
 
 export default async function Admin() {

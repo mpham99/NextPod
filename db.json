@@ -69,6 +69,13 @@
       "artist": "Chromatica",
       "released_date": "2020-02-02",
       "tracks": "13"
+    },
+    {
+      "id": "22",
+      "name": "Red",
+      "artist": "Taylor Swift",
+      "released_date": "2012-10-01",
+      "tracks": "12"
     }
   ]
 }
