@@ -2,6 +2,7 @@
 
 import {useState} from 'react';
 import {redirect} from "next/navigation";
+import {editAlbum} from "@/app/actions/server-actions";
 
 export default function ClientForm({album}) {
     const [form, setForm] = useState({
@@ -20,17 +21,7 @@ export default function ClientForm({album}) {
 
     async function handleSubmit(e) {
         e.preventDefault();
-
-        const res = await fetch(`http://localhost:4000/albums/${form.id}`,{
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(form)
-        });
-        if (res.ok) {
-            redirect("/admin");
-        }
+        await editAlbum(form);
     }
 
     return(

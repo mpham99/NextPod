@@ -47,3 +47,30 @@ export async function createAlbum(formData){
   // Redirect to home page
   redirect('/collection');
 }
+
+export async function editAlbum(formData){
+  const rawFormData = {
+    id: formData.id,
+    name: formData.name,
+    artist: formData.artist,
+    released_date: formData.released_date,
+    tracks: formData.tracks,
+    description: formData.description
+  };
+
+  await fetch(`http://localhost:4000/albums/${rawFormData.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type" : "application/json"
+    },
+    body: JSON.stringify(rawFormData)
+  });
+
+  // Revalidate pages
+  revalidatePath('/collection');
+  revalidatePath(`/collection/${rawFormData.id}`);
+  revalidatePath('/admin');
+  revalidatePath(`/admin/${rawFormData.id}`);
+  // Redirect to admin page
+  redirect('/admin');
+}
