@@ -11,16 +11,43 @@ export default function ClientForm({album}) {
         artist: album.artist,
         released_date: album.released_date,
         tracks: album.tracks,
-        description: album.description
+        description: album.description || ''
     });
+    const [errors, setErrors] = useState([]);
 
     function handleChange(e) {
         const {name, value} = e.target;
         setForm((prev) => ({...prev, [name]:value}));
     }
 
+    function formValidation(data) {
+        const errorList = [];
+
+        if (data.name.trim().length < 1 || data.name.trim().length > 200) {
+            errorList.push('Album name must be between 1 and 200 characters in length');
+        }
+
+        if (!Number.isInteger(Number(data.tracks)) || Number(data.tracks) <= 0) {
+            errorList.push('Album needs to have 1 track at minimum');
+        }
+
+        if (data.description.length > 1000) {
+            errorList.push('Description must not exceed 1000 characters in length.');
+        }
+
+        return errorList;
+    }
+
     async function handleSubmit(e) {
         e.preventDefault();
+
+        // Form Validation
+        const errorList = formValidation(form);
+        if (errorList.length > 0){
+            setErrors(errorList);
+            return;
+        }
+
         await editAlbum(form);
     }
 
@@ -29,6 +56,13 @@ export default function ClientForm({album}) {
             <h1 className="text-2xl font-bold mb-6">Create New Album</h1>
 
             <form onSubmit={handleSubmit} className="space-y-4">
+                {errors.length > 0 && (
+                    <ul className="bg-red-100 border border-red-400 text-red-700 p-4 rounded text-sm space-y-1">
+                        {errors.map((err, index) => (
+                            <li key={index}>• {err}</li>
+                        ))}
+                    </ul>
+                )}
                 <div>
                     <label className="block font-medium mb-1" htmlFor="id">ID</label>
                     <input type="number" name="id" id="id" className="w-full border rounded p-2" disabled
