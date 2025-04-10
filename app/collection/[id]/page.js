@@ -33,8 +33,8 @@ export default async function AlbumDetailPage({params}) {
                 <Link href="/collection">← Back</Link>
             </Button>
 
-            <Card>
-                <CardContent className="p-4">
+            <Card className="bg-white">
+                <CardContent className="p-4 bg-white">
                     <h2 className="text-xl font-semibold mb-4">Album Details</h2>
                     <table className="w-full border-collapse">
                         <tbody className="text-sm">
